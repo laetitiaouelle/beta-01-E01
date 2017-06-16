@@ -1,3 +1,7 @@
+const getSize = exports => Object.keys(exports)
+  .filter(key => !key.includes(' '))
+  .length
+
 module.exports = ({ stringify, describe, test, code, exports }) => [
   describe('str', test.prop('str', String, '42')),
   describe('num', test.prop('num', Number, 42)),
@@ -9,6 +13,13 @@ module.exports = ({ stringify, describe, test, code, exports }) => [
     test(`should contain the character ${c}`)
       .value(exports.escapeStr)
       .include(c)))),
+  describe('spaced key', [
+    test(`module.exports['spaced key'] should equal true`)
+      .value(exports.obj)
+      .map('spaced key')
+      .equal(true)
+    ,
+  ]),
   describe('arr', [
     test.defined('arr'),
     test.type('arr', Array),
@@ -61,16 +72,11 @@ module.exports = ({ stringify, describe, test, code, exports }) => [
   describe('obj', [
     test.defined('obj'),
     test.type('obj', Object),
-    test(`should have ${Object.keys(exports).length - 1} elements`)
+    test(`should have ${getSize(exports)} elements`)
       .value(exports.obj)
       .map(Object.keys)
       .map('length')
-      .equal(Object.keys(exports).length - 1)
-    ,
-    test(`obj['spaced key'] should equal true`)
-      .value(exports.obj)
-      .map('spaced key')
-      .equal(true)
+      .equal(getSize(exports))
     ,
   ].concat(Object.keys(exports).filter(key => !key.includes(' '))
     .map(key => test(`obj.${key} should equal module.exports.${key}`)

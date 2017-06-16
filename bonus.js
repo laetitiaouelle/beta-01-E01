@@ -3,10 +3,10 @@ module.exports = ({ describe, test, $ }) => [
     test(`function line ${def.loc.start.line} column ${
       def.loc.start.column} is a single expression`)
       .value(def.body.type)
-      .notEqual('BlockStatement')))
+      .notEqual('BlockStatement'))
   .concat([
     test('no variable declaration')
       .value($('VariableDeclarator').length)
       .equal(0, 'Variables declaration count should be 0'),
-  ]),
+  ])),
 ]
