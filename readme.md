@@ -8,12 +8,12 @@ Then `fork` this repository and `clone` your fork to start working on it.
 ------
 
 Get a grasp of JavaScript syntax by reading the 
-[commented code exemples](https://thot.space/git/javascript/example)
+[commented code examples](https://thot.space/git/javascript/example)
 
 ------
 
 If you have a question, do these in order:
- - Search in the exemple
+ - Search in the example
  - Search in the documentation
  - Search online
  - keep looking *(~15 minutes is a good balance, less would show poor efforts, more you start to just being stubborn loose your time)*
@@ -40,7 +40,7 @@ export a number `num` with the value `42`
 export a boolean `bool` with the value `false`
 
 ### `escapeStr`
-export a string `escapeStr` containg characters \\, /, ', ", and `
+export a string `escapeStr` containing the characters \\, /, ', ", and `
 
 ### `spaced key`
 export a boolean `'spaced key'` with the value `true`
