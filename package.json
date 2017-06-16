@@ -1,0 +1,15 @@
+{
+  "name": "S01E01",
+  "version": "1.0.0",
+  "description": "The Pilot",
+  "main": "index.js",
+  "scripts": {
+    "test": "node node_modules/thot-tester/bin/tester"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "thot-tester": "^1.0.2"
+  }
+}
