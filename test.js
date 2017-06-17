@@ -15,7 +15,7 @@ module.exports = ({ stringify, describe, test, code, exports }) => [
       .include(c)))),
   describe('spaced key', [
     test(`module.exports['spaced key'] should equal true`)
-      .value(exports.obj)
+      .value(exports['spaced key'])
       .map('spaced key')
       .equal(true)
     ,
