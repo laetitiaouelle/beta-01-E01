@@ -59,7 +59,7 @@ and return the corresponding value
 
 #### test `obj`
 export an object `obj` that contains all the key / values from `module.exports`
-but the spaced key, `obj.obj` should be a circular reference to itself
+except for the spaced key, `obj.obj` should be a circular reference to itself
 
 
 
