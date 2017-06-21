@@ -1,6 +1,6 @@
 # The pilot
 If you don't have done it already, read
-[how to setup](https://thot.space/git/javascript/setup)
+[how to setup](https://thot.space/javascript/setup)
 to prepare your workspace.
 
 Then `fork` this repository and `clone` your fork to start working on it.
@@ -8,7 +8,7 @@ Then `fork` this repository and `clone` your fork to start working on it.
 ------
 
 Get a grasp of JavaScript syntax by reading the 
-[commented code examples](https://thot.space/git/javascript/example)
+[commented code examples](https://thot.space/javascript/example)
 
 ------
 
