@@ -1,5 +1,5 @@
 # The pilot
-If you don't have done it already, read
+If you haven't done it already, read
 [how to setup](https://thot.space/javascript/setup)
 to prepare your workspace.
 
@@ -16,7 +16,7 @@ If you have a question, do these in order:
  - Search in the example
  - Search in the documentation
  - Search online
- - keep looking *(~15 minutes is a good balance, less would show poor efforts, more you start to just being stubborn loose your time)*
+ - keep looking *(~15 minutes is a good balance, less would show poor efforts, more you start to just being stubborn / loosing your time)*
  - Ask for help from any inhert object nearby
   ([rubber duck debugging](https://en.wikipedia.org/wiki/Rubber_duck_debugging))
  - Ask your nearest peer
@@ -67,7 +67,7 @@ except for the spaced key, `obj.obj` should be a circular reference to itself
 
 
 #### bonus rule `no block statement`
-You didn't made any blocks, only arrow functions.
+You haven't made any blocks, only arrow functions.
 
 #### bonus rule `no variable declarations`
 Only functions and arguments
