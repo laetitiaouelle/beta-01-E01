@@ -78,17 +78,17 @@ and return the corresponding value
       .map(fn => fn() && typeof fn())
       .equal('object'),
 
-    test('the returned object by should contain a function set')
+    test('the returned object by safe should contain a function set')
       .value(exports.safe)
       .map(fn => typeof fn().set)
       .equal('function'),
 
-    test('the returned object by should contain a function get')
+    test('the returned object by safe should contain a function get')
       .value(exports.safe)
       .map(fn => typeof fn().get)
       .equal('function'),
 
-    test('safe() should always return a new object')
+    test('safe() should always use a new object')
       .value(exports.safe)
       .map(fn => fn().get(fn().set(ref)))
       .equal(undefined),
