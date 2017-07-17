@@ -4,6 +4,8 @@
 */
 
 const ref = { lol: {} }
+const rng = Array(100000).fill().map(Math.random)
+const total = rng.reduce((a, b) => a + b)
 
 module.exports = ({ describe, test, $, exports }) => [
   describe('BONUS', [
@@ -73,6 +75,7 @@ and return the corresponding value
       .value(exports.safe)
       .map('length')
       .equal(0),
+
     test('safe should return an object')
       .value(exports.safe)
       .map(fn => fn() && typeof fn())
@@ -87,6 +90,14 @@ and return the corresponding value
       .value(exports.safe)
       .map(fn => typeof fn().get)
       .equal('function'),
+
+    test('safe() should be able to store a few different values')
+      .value(exports.safe)
+      .map(fn => (({ get, set }) => rng
+        .map(n => set(n))
+        .map(get)
+        .reduce((a,b) => a + b))(fn()))
+      .equal(total),
 
     test('safe() should always use a new object')
       .value(exports.safe)
