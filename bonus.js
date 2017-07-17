@@ -93,6 +93,11 @@ and return the corresponding value
       .map(fn => fn().get(fn().set(ref)))
       .equal(undefined),
 
+    test('safe() same values should return differents key every set')
+      .value(exports.safe)
+      .map(fn => (({ set }) => set(ref) === set(ref))(fn()))
+      .equal(false),
+
     test('safe() should always return a different key')
       .value(exports.safe)
       .map(fn => fn().set(ref) === fn().set(ref))
