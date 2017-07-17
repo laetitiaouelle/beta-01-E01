@@ -24,7 +24,7 @@ values from the previously given object
 
 */
 
-const ref = {}
+const ref = { lol: {} }
 
 module.exports = ({ describe, test, $, exports }) => [
   describe('BONUS', [
@@ -46,6 +46,25 @@ module.exports = ({ describe, test, $, exports }) => [
       .value(exports.makeGet)
       .map(fn => fn(ref)())
       .equal(ref),
+    test.defined('hideMe'),
+    test.type('hideMe', Function),
+    test('hideMe should take 1 argument')
+      .value(exports.hideMe)
+      .map('length')
+      .equal(1),
+    test('hideMe should return a function')
+      .value(exports.hideMe)
+      .map(fn => typeof fn({}))
+      .equal('function'),
+    test('the returned function by hideMe should take one argument')
+      .value(exports.hideMe)
+      .map(fn => fn({}).length)
+      .equal(1),
+    test('the returned function should by hideMe return the value at the given '
+        +'key in the previously given object')
+      .value(exports.hideMe)
+      .map(fn => fn(ref)('lol'))
+      .equal(ref.lol),
   ].concat($('arrow').map(def =>
     test(`function line ${def.loc.start.line} column ${
       def.loc.start.column} is a single expression`)
