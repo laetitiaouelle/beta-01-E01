@@ -88,10 +88,15 @@ and return the corresponding value
       .map(fn => typeof fn().get)
       .equal('function'),
 
-    test('safe().set should take up to 2 arguments')
+    test('safe() should always return a new object')
       .value(exports.safe)
-      .map(fn => fn().set.length)
-      .equal(2),
+      .map(fn => fn().get(fn().set(ref)))
+      .equal(undefined),
+
+    test('safe() should always return a different key')
+      .value(exports.safe)
+      .map(fn => fn().set(ref) === fn().set(ref))
+      .equal(false),
 
     test('safe().set should return a key, calling get with this key should'
         +'return the first arguement of set')
