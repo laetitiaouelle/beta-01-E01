@@ -24,19 +24,37 @@ values from the previously given object
 
 */
 
-
+const ref = {}
 
 module.exports = ({ describe, test, $, exports }) => [
-  describe('BONUS', $('arrow').map(def =>
+  describe('BONUS', [
+    test.defined('makeGet'),
+    test.type('makeGet', Function),
+    test('makeGet should take 1 argument')
+      .value(exports.makeGet)
+      .map('length')
+      .equal(1),
+    test('makeGet should return a function')
+      .value(exports.makeGet)
+      .map(fn => typeof fn('5'))
+      .equal('function'),
+    test('the returned function by makeGet should take no arguments')
+      .value(exports.makeGet)
+      .map(fn => fn('5').length)
+      .equal(0),
+    test('the returned function should by makeGet return the given argument')
+      .value(exports.makeGet)
+      .map(fn => fn(ref)())
+      .equal(ref),
+  ].concat($('arrow').map(def =>
     test(`function line ${def.loc.start.line} column ${
       def.loc.start.column} is a single expression`)
       .value(def.body.type)
-      .notEqual('BlockStatement'))
+      .notEqual('BlockStatement')))
   .concat([
     test('no variable declaration')
       .value($('VariableDeclarator').length)
-      .equal(0, 'Variables declaration count should be 0')
-    ,
+      .equal(0, 'Variables declaration count should be 0'),
     test(`Don't Repeat Yourself`)
       .value($('ExpressionStatement Identifier'))
       .map(nodes => nodes
@@ -44,7 +62,6 @@ module.exports = ({ describe, test, $, exports }) => [
         .map(n => n.name)
         .filter(name => Object.keys(exports).includes(name))
         .length)
-      .equal(Object.keys(exports).length, 'You have repeated keys')
-    ,
+      .equal(Object.keys(exports).length, 'You have repeated keys'),
   ])),
 ]
