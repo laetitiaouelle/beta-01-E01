@@ -4,12 +4,14 @@
   "description": "The Pilot",
   "main": "index.js",
   "scripts": {
-    "test": "node node_modules/thot-tester/bin/tester"
+    "update": "git checkout HEAD package.json test.js readme.md bonus.js && git pull base master",
+    "postinstall": "git remote add base https://thot.space/git/javascript/S01E01.git",
+    "test": "node --use-strict --harmony-tailcalls node_modules/thot-tester/bin/tester"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "thot-tester": "^1.0.3"
+    "thot-tester": "^1.0.5"
   }
 }
