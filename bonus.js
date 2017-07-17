@@ -96,7 +96,7 @@ and return the corresponding value
       .map(fn => (({ get, set }) => rng
         .map(n => set(n))
         .map(get)
-        .reduce((a,b) => a + b))(fn()))
+        .reduce((a, b) => Number(a) + b))(fn()))
       .equal(total),
 
     test('safe() should always use a new object')
