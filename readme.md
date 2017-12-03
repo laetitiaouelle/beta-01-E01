@@ -3,12 +3,12 @@ If you haven't done it already, watch [the introduction](https://youtube.com/wat
 to understand the tool you will be using.
 
 Then `fork` this repository and `clone` **your fork** to start working on it.
-To get started read the [Standard procedure](https://github.com/nan-ci/js-standard-procedure)
+To get started read the [Standard procedure](https://nan.ci/js-standard-procedure)
 
 ------
 
 Get a grasp of JavaScript syntax by reading the 
-[commented code examples](https://github.com/nan-ci/js-examples)
+[commented code examples](https://nan.ci/js-examples)
 
 ------
 
