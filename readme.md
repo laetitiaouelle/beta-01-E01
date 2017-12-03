@@ -1,15 +1,14 @@
 # The pilot
-If you haven't done it already, read
-[how to setup](https://thot.space/javascript/setup)
-to prepare your workspace.
+If you haven't done it already, watch [the introduction](https://youtube.com/watch?v=placeholder)
+to understand the tool you will be using.
 
-Then `fork` this repository and `clone` your fork to start working on it.
-To get started read the [Standard procedure](https://thot.space/javascript/setup/src/master/procedure.md)
+Then `fork` this repository and `clone` **your fork** to start working on it.
+To get started read the [Standard procedure](https://github.com/nan-ci/js-standard-procedure)
 
 ------
 
 Get a grasp of JavaScript syntax by reading the 
-[commented code examples](https://thot.space/javascript/example)
+[commented code examples](https://github.com/nan-ci/js-examples)
 
 ------
 
@@ -22,12 +21,10 @@ If you have a question, do these in order:
   ([rubber duck debugging](https://en.wikipedia.org/wiki/Rubber_duck_debugging))
  - Ask your nearest peer
  - Ask another peer
- - Ask a seeder
  - Ask on discord
   ([don't ask to ask, just ask](http://sol.gfxile.net/dontask.html))
 
 ***Make sure you understand how your problem was solved***
-
 
 
 ## TESTS
