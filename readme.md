@@ -1,6 +1,6 @@
 # The pilot
-If you haven't done it already, watch [the introduction](https://youtube.com/watch?v=placeholder)
-to understand the tool you will be using.
+If you haven't done it already, learn about [the tools](https://nan.ci/js-tools/)
+to understand more about what you will be using.
 
 Then `fork` this repository and `clone` **your fork** to start working on it.
 To get started read the [Standard procedure](https://nan.ci/js-standard-procedure)
