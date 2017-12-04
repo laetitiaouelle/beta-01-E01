@@ -12,6 +12,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "thot-tester": "^1.0.5"
+    "thot-tester": "^1.1.2"
   }
 }
