@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "update": "git checkout HEAD package.json test.js readme.md bonus.js && git pull base master",
-    "postinstall": "git remote add base https://thot.space/git/javascript/S01E01.git",
-    "test": "node --use-strict --harmony-tailcalls node_modules/thot-tester/bin/tester"
+    "postinstall": "git remote add base https://github.com/nan-ci/beta-01-E01.git",
+    "test": "node --use-strict node_modules/thot-tester/bin/tester"
   },
   "keywords": [],
   "author": "",
